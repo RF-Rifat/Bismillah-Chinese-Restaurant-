@@ -31,6 +31,7 @@ import {
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const navListMenuItems = [
   {
@@ -127,7 +128,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2  pr-4 text-gray-900 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+              className="font-bold py-2 px-4 rounded flex items-center gap-2  text-gray-900 text-sm me-2"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -162,25 +163,27 @@ function NavListMenu() {
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row gap-2 lg:gap-4 lg:p-1">
       <Link
         href={"/"}
-        className={`text-sm px-5 py-2.5 me-2 mb-2 link ${
-          usePathname() === "/"
-            ? "active text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-            : ""
-        }`}
+        className={`font-bold py-2 px-4   
+           ${
+             usePathname() === "/"
+               ? "active   bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
+               : ""
+           }`}
       >
         Home
       </Link>
       <NavListMenu />
       <Link
         href={"/contact"}
-        className={`text-sm px-5 py-2.5 me-2 mb-2 link ${
-          usePathname() === "/contact"
-            ? "active text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-            : ""
-        }`}
+        className={`font-bold py-2 px-4   
+           ${
+             usePathname() === "/contact"
+               ? "active   bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
+               : ""
+           }`}
       >
         Contact
       </Link>
@@ -206,13 +209,7 @@ export function MainNavbar() {
     >
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href={"/"}>
-          <Typography
-            as="div"
-            variant="h6"
-            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-          >
-            Bismillah Chinese
-          </Typography>
+          <Image width={40} height={40} alt="logo" src={"/image/logo.png"} />
         </Link>
         <div className="hidden lg:block">
           <NavList />

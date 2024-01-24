@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const BannerMarquee = () => {
   return (
-    <div className="h-14 mb-24 mx-auto bg-white text-black p-2">
+    <div className="h-14 lg:mb-14 mx-auto bg-white text-black p-2">
       <div>
         <Marquee autoFill={true} pauseOnHover={true}>
           <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold">
