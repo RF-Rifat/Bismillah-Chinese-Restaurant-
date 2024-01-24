@@ -202,7 +202,7 @@ export function MainNavbar() {
     <Navbar
       shadow={false}
       fullWidth
-      className="mx-auto max-w-screen-xl px-4 py-2 border-0 sticky top-0 z-50"
+      className="mx-auto max-w-screen-2xl px-4 py-2 border-0 sticky top-0 z-50"
     >
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href={"/"}>

@@ -3,7 +3,7 @@ import "./globals.css";
 import { MainNavbar } from "@/components/navbar";
 
 
-const inter = Inter({ subsets: ["latin"] });
+const latin = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`max-w-screen-2xl mx-auto ${latin.className}`}>
         <MainNavbar />
         {children}
       </body>
