@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
       </head>
-      <body className={`max-w-screen-2xl mx-auto ${latin.className}`}>
+      <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
         <MainNavbar />
         {children}
         <Footer />
