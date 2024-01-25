@@ -92,7 +92,7 @@ export function MainNavbar() {
     >
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href={"/"}>
-          <Image width={40} height={40} alt="logo" src={"/image/logo.png"} />
+          <Image width={60} height={60} alt="logo" src={"/image/food.gif"} />
         </Link>
         <div className="hidden lg:block">
           <NavList />

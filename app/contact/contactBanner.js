@@ -23,7 +23,7 @@ const ContactBanner = () => {
                 আমাদের সাথে যোগাযোগ করতে এখানে ক্লিক করুন অথবা নিচের ঠিকানায়
                 যোগাযোগ করুন:
               </p>
-              <a href="#contact" className="w-full mx-auto">
+              <a href="#contact" className="w-full flex justify-center">
                 <Image
                   height={100}
                   width={100}
@@ -35,8 +35,8 @@ const ContactBanner = () => {
           </div>
         </div>
       </div>
-          <div
-              id="contact"
+      <div
+        id="contact"
         className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
         style={{ transform: "translateZ(0px)" }}
       >
