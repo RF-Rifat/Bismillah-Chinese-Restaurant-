@@ -15,9 +15,9 @@ const LatestFood = () => {
       <div className="container mx-auto">
         <div className="px-4 mb-10 md:text-center md:mb-20">
           <h2 className="pb-2 text-2xl font-bold text-gray-800 md:text-4xl dark:text-gray-300">
-            Top Rated Food
+            সেরা খাবার তালিকা
           </h2>
-          <div className="flex w-32 mt-1 mb-6 overflow-hidden rounded md:mx-auto md:mb-14">
+          <div className="flex w-32 mt-1 mb-6 overflow-hidden rounded md:mx-auto md:mb-6">
             <div className="flex-1 h-2 bg-orange-200"></div>
             <div className="flex-1 h-2 bg-orange-400"></div>
             <div className="flex-1 h-2 bg-orange-300"></div>
@@ -83,7 +83,6 @@ const LatestFood = () => {
                 alt="latest Food"
                 fill
                 sizes="(min-width: 408px) 50vw, 100vw"
-
                 style={{
                   objectFit: "cover",
                 }}

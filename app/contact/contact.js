@@ -1,12 +1,13 @@
 "use client";
-import { Button } from "@material-tailwind/react";
+import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
+import { Button, Textarea } from "@material-tailwind/react";
 
 const Contact = () => {
   return (
     <section className="mb-32">
       <div
         id="map"
-        className="relative h-[50svh] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
+        className="relative h-[60svh] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.38649379573667!2d89.54391303993036!3d25.3316093208381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fd23ec01ac27b3%3A0xf25430023edf5f8a!2sBismillah%20Restaurant!5e0!3m2!1sen!2sus!4v1706165239434!5m2!1sen!2sus"
@@ -24,61 +25,73 @@ const Contact = () => {
           <div className="flex flex-wrap">
             <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
               <form>
-                <div className="relative mb-6" data-te-input-wrapper-init="">
-                  <input
-                    type="text"
-                    className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                    id="exampleInput90"
-                  />
-                  <label
-                    className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                    htmlFor="exampleInput90"
-                  >
-                    Name
-                  </label>
+                <div className="relative mb-4">
+                  <div>
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Name :
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="আপনার নাম"
+                      required
+                    />
+                  </div>
                 </div>
-                <div className="relative mb-6" data-te-input-wrapper-init="">
-                  <input
-                    type="email"
-                    className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                    id="exampleInput91"
-                  />
-                  <label
-                    className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                    htmlFor="exampleInput91"
-                  >
-                    Email address
-                  </label>
+                <div className="relative mb-4">
+                  <div>
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Email :
+                    </label>
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="আপনার ইমেইল"
+                      required
+                    />
+                  </div>
                 </div>
-                <div className="relative mb-6" data-te-input-wrapper-init="">
-                  <textarea
-                    className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                    id="exampleFormControlTextarea1"
-                    rows={3}
-                    defaultValue={""}
-                  />
-                  <label
-                    htmlFor="exampleFormControlTextarea1"
-                    className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                  >
-                    Message
-                  </label>
+                <div className="relative mb-6">
+                  <div>
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Message :
+                    </label>
+                    <textarea
+                      type="text"
+                      id="message"
+                      name="Message"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="আপনার মন্তব্য"
+                      required
+                    />
+                  </div>
                 </div>
-                <Button
-                  type="submit"
-                  className=""
-                >
+
+                <Button type="submit" className="">
                   Send
                 </Button>
               </form>
             </div>
-            <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
+            <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12 my-auto">
               <div className="flex flex-wrap">
                 <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
                   <div className="flex items-start">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-sky-200 p-4 text-primary">
-                        <svg
+                      <div className="inline-block rounded-md bg-sky-200 p-4 text-primary text-black">
+                        {/* <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -91,15 +104,19 @@ const Contact = () => {
                             strokeLinejoin="round"
                             d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z"
                           />
-                        </svg>
+                        </svg> */}
+                        <ChatBubbleOvalLeftEllipsisIcon className="h-8 w-8 text-black" />
                       </div>
                     </div>
                     <div className="ml-6 grow">
-                      <p className="mb-2 font-bold ">Technical support</p>
-                      <p className="text-sm text-neutral-500">
-                        example@gmail.com
-                      </p>
-                      <p className="text-sm text-neutral-500">1-600-890-4567</p>
+                      <p className="mb-2 font-bold ">সামাজিক যোগাযোগ মাধ্যম</p>
+
+                      <a
+                        href="https://www.facebook.com/people/%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A7%8D-%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%BF%E0%A6%9C-%E0%A6%B0%E0%A7%87%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%81%E0%A6%B0%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F-Beautiful-Service-is-Our-Dream/100083517151611"
+                        className="text-sm text-neutral-500 underline"
+                      >
+                        বিসমিল্লাহ্ চাইনিজ রেস্টুরেন্ট
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -124,10 +141,9 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="ml-6 grow">
-                      <p className="mb-2 font-bold ">Address</p>
+                      <p className="mb-2 font-bold ">ঠিকানা</p>
                       <p className="text-sm text-neutral-500">
-                        Promij (Dr.Prodip), Gaibandha, Bangladesh, <br />
-                        8GJV+JH Gaibandha, Bangladesh <br />
+                        আর.এম. প্লাজা, (২য় তলা) সার্কুলার রোড, গাইবান্ধা ।
                       </p>
                     </div>
                   </div>
@@ -155,8 +171,8 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="ml-6 grow">
-                      <p className="mb-2 font-bold ">Land Line</p>
-                      <p className="text-neutral-500"> (0421) 431 2030</p>
+                      <p className="mb-2 font-bold">টেলিফোন</p>
+                      <p className="text-neutral-500">০৯৬৩৯-১৩৫৭৭৮</p>
                     </div>
                   </div>
                 </div>
@@ -181,8 +197,8 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="ml-6 grow">
-                      <p className="mb-2 font-bold ">Mobile</p>
-                      <p className="text-neutral-500"> +91 123456789</p>
+                      <p className="mb-2 font-bold ">মোবাইল</p>
+                      <p className="text-neutral-500"> ০১৯৭০-৩৩৫৭৭৪</p>
                     </div>
                   </div>
                 </div>
