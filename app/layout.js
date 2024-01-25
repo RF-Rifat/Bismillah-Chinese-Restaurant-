@@ -12,8 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <head>
+        <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
+      </head>
       <body className={`max-w-screen-2xl mx-auto ${latin.className}`}>
         <MainNavbar />
         {children}

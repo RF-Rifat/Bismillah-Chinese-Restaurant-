@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const LatestFood = () => {
   return (
@@ -23,10 +24,10 @@ const LatestFood = () => {
           </div>{" "}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card className="mt-6 w-96">
+          <Card className="mt-6 bg-[#C1F0C1]">
             <CardHeader color="blue-gray" className="relative h-56">
               <Image
-                src="/image/banner1.jpg"
+                src="/image/food1.jpg"
                 alt="latest Food"
                 fill
                 sizes="(min-width: 808px) 50vw, 100vw"
@@ -37,16 +38,95 @@ const LatestFood = () => {
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
-                UI/UX Review Check
+                বিসমিল্লাহ্ চাইনিজ, সেট মেনু প্লাটার
               </Typography>
               <Typography>
-                The place is close to Barceloneta Beach and bus stop just 2 min
-                by walk and near to &quot;Naviglio&quot; where you can enjoy the
-                main night life in Barcelona.
+                বিগ মাটন, ফ্রাইড রাইস, সালাদ এবং চানিজ ভেজিটেবল মূল্য: 450.00
               </Typography>
             </CardBody>
             <CardFooter className="pt-0">
-              <Button>Read More</Button>
+              <Link href={"/menu"}>
+                <Button>অর্ডার করুন</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card className="mt-6 bg-[#C1F0C1]">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <Image
+                src="/image/food1.jpg"
+                alt="latest Food"
+                fill
+                sizes="(min-width: 808px) 50vw, 100vw"
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                বিসমিল্লাহ্ চাইনিজ, সেট মেনু প্লাটার
+              </Typography>
+              <Typography>
+                বিগ মাটন, ফ্রাইড রাইস, সালাদ এবং চানিজ ভেজিটেবল মূল্য: 450.00
+              </Typography>
+            </CardBody>
+            <CardFooter className="pt-0">
+              <Link href={"/menu"}>
+                <Button>অর্ডার করুন</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card className="mt-6 bg-[#C1F0C1]">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <Image
+                src="/image/food1.jpg"
+                alt="latest Food"
+                fill
+                sizes="(min-width: 408px) 50vw, 100vw"
+
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                বিসমিল্লাহ্ চাইনিজ, সেট মেনু প্লাটার
+              </Typography>
+              <Typography>
+                বিগ মাটন, ফ্রাইড রাইস, সালাদ এবং চানিজ ভেজিটেবল মূল্য: 450.00
+              </Typography>
+            </CardBody>
+            <CardFooter className="pt-0">
+              <Link href={"/menu"}>
+                <Button>অর্ডার করুন</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card className="mt-6 bg-[#C1F0C1]">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <Image
+                src="/image/food1.jpg"
+                alt="latest Food"
+                fill
+                sizes="(min-width: 808px) 50vw, 100vw"
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                বিসমিল্লাহ্ চাইনিজ, সেট মেনু প্লাটার
+              </Typography>
+              <Typography>
+                বিগ মাটন, ফ্রাইড রাইস, সালাদ এবং চানিজ ভেজিটেবল মূল্য: 450.00
+              </Typography>
+            </CardBody>
+            <CardFooter className="pt-0">
+              <Link href={"/menu"}>
+                <Button>অর্ডার করুন</Button>
+              </Link>
             </CardFooter>
           </Card>
         </div>

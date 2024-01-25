@@ -1,7 +1,13 @@
 import Contact from "./contact";
+import ContactBanner from "./contactBanner";
 
 const page = () => {
-  return <Contact />;
+  return (
+    <>
+      <ContactBanner />
+      <Contact />
+    </>
+  );
 };
 
 export default page;

@@ -1,9 +1,12 @@
+"use client";
+import { Button } from "@material-tailwind/react";
+
 const Contact = () => {
   return (
     <section className="mb-32">
       <div
         id="map"
-        className="relative h-[600px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
+        className="relative h-[50svh] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.38649379573667!2d89.54391303993036!3d25.3316093208381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fd23ec01ac27b3%3A0xf25430023edf5f8a!2sBismillah%20Restaurant!5e0!3m2!1sen!2sus!4v1706165239434!5m2!1sen!2sus"
@@ -16,7 +19,7 @@ const Contact = () => {
           loading="lazy"
         />
       </div>
-      <div className="container px-6 md:px-12">
+      <div className="container px-6 md:px-16">
         <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
           <div className="flex flex-wrap">
             <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
@@ -61,27 +64,12 @@ const Contact = () => {
                     Message
                   </label>
                 </div>
-                <div className="mb-6 inline-block min-h-[1.5rem] justify-center pl-[1.5rem] md:flex">
-                  <input
-                    className="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent "
-                    type="checkbox"
-                    defaultValue=""
-                    id="exampleCheck96"
-                    defaultChecked=""
-                  />
-                  <label
-                    className="inline-block pl-[0.15rem] hover:cursor-pointer"
-                    htmlFor="exampleCheck96"
-                  >
-                    Send me a copy of this message
-                  </label>
-                </div>
-                <button
-                  type="button"
-                  className="mb-6 w-full rounded bg-sky-500 text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal   lg:mb-0"
+                <Button
+                  type="submit"
+                  className=""
                 >
                   Send
-                </button>
+                </Button>
               </form>
             </div>
             <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
@@ -138,8 +126,8 @@ const Contact = () => {
                     <div className="ml-6 grow">
                       <p className="mb-2 font-bold ">Address</p>
                       <p className="text-sm text-neutral-500">
-                        abcd, <br />
-                        xyz <br />
+                        Promij (Dr.Prodip), Gaibandha, Bangladesh, <br />
+                        8GJV+JH Gaibandha, Bangladesh <br />
                       </p>
                     </div>
                   </div>
