@@ -1,7 +1,7 @@
-const page = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+import Contact from "./contact";
 
-export default page
+const page = () => {
+  return <Contact />;
+};
+
+export default page;

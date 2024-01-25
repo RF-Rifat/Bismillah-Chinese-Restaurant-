@@ -128,7 +128,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="font-bold py-2 px-4 rounded flex items-center gap-2  text-gray-900 text-sm me-2"
+              className="font-bold py-2 px-4 rounded flex items-center gap-2 text-gray-900 text-sm"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -163,13 +163,13 @@ function NavListMenu() {
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row gap-2 lg:gap-4 lg:p-1">
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row gap-1 lg:p-1">
       <Link
         href={"/"}
-        className={`font-bold py-2 px-4   
+        className={`font-bold py-2 px-4 mr-4  
            ${
              usePathname() === "/"
-               ? "active   bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
+               ? "active  bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
                : ""
            }`}
       >
@@ -205,7 +205,7 @@ export function MainNavbar() {
     <Navbar
       shadow={false}
       fullWidth
-      className="mx-auto max-w-screen-2xl px-4 py-2 border-0 sticky top-0 z-50"
+      className="mx-auto max-w-screen-2xl px-4 py-2 border-0 sticky top-0 z-50 bg-transparent"
     >
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href={"/"}>

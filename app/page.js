@@ -2,7 +2,7 @@
 
 import LatestFood from "@/components/home/latestFood";
 import BannerMarquee from "@/components/home/marquee";
-import BannerSwiper from "@/components/home/swiper";
+import BannerSwiper from "@/components/home/banner";
 
 function Hero() {
   return (

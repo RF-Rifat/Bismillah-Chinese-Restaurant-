@@ -23,12 +23,13 @@ const BannerSwiper = () => {
   ];
   return (
     <div className="2xl:flex px-6 justify-between lg:my-10 gap-6 max-w-screen-2xl mx-auto p-4">
-      <div className="grid py-6 lg:py-24 items-center space-y-2 text-center 2xl:text-left 2xl:w-1/2">
+      <div className="grid py-6 lg:py-24 items-center space-y-6 text-center 2xl:text-left 2xl:w-1/2">
         <h4 className="text-3xl lg:text-6xl text-green-500 font-semibold">
           ১০০% হালাল খাবার
         </h4>
         <h2 className="text-2xl font-bold">
-                  <span className="text-red-500">বিসমিল্লাহ্‌ চাইনীজ</span> অপূর্ব স্বাদের সাথে স্বাগতম!
+          <span className="text-red-500">বিসমিল্লাহ্‌ চাইনীজ</span> অপূর্ব
+          স্বাদের সাথে স্বাগতম!
         </h2>
         <p className="text-lg">
           স্বাদে ভরা আহার, পৌঁছে আসুন এখানে! রুচির পরিসরে আমরা নিয়ে এসেছি অপূর্ব
@@ -64,12 +65,11 @@ const BannerSwiper = () => {
           }}
           pagination={true}
           modules={[EffectCoverflow, Pagination, Autoplay]}
-          className="mySwiper"
+          className="mySwiper rounded-md"
         >
           {imageArray.map((imageUrl, index) => (
             <SwiperSlide key={index}>
               <Image
-                
                 src={imageUrl}
                 alt={`Slide ${index + 1}`}
                 fill
