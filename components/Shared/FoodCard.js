@@ -14,7 +14,7 @@ const FoodCard = ({ cardInfo }) => {
   const { imageSrc, title, description } = cardInfo || {};
   return (
     <Card className="mt-6 bg-[#C1F0C1]">
-      <CardHeader color="blue-gray" className="relative h-56">
+      <CardHeader color="blue-gray" className="relative h-60 lg:h-80">
         <Image
           src={imageSrc}
           alt="সেরা খাবার"
