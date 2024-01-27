@@ -11,18 +11,18 @@ import Image from "next/image";
 
 const MenuFoodCard = ({ cardData }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-6">
       {cardData?.map((cardData) => (
-        <Card key={cardData.id}>
+        <Card key={cardData.id} className="bg-[#C1F0C1]">
           <CardHeader shadow={false} floated={false} className="h-60">
             <Image
               src={cardData?.imageSrc}
               alt="card-image"
               className="h-full w-full object-cover"
+              quality={10}
               fill
-              sizes="(min-width: 808px) 50vw, 100vw"
               style={{
-                objectFit: "contain",
+                objectFit: "fill",
               }}
             />
           </CardHeader>
@@ -32,7 +32,7 @@ const MenuFoodCard = ({ cardData }) => {
                 {cardData?.title}
               </Typography>
               <Typography color="blue-gray" className="font-medium">
-                $95.00
+                95.00
               </Typography>
             </div>
             <Typography
@@ -44,11 +44,21 @@ const MenuFoodCard = ({ cardData }) => {
             </Typography>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button
-              ripple={false}
-              fullWidth={true}
-              className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-            >
+            <Button color="green" className="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+                />
+              </svg>
               Add to Cart
             </Button>
           </CardFooter>
