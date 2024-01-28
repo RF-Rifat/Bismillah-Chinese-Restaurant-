@@ -46,8 +46,7 @@ const MenuFoodCard = ({ cardData }) => {
           </CardBody>
           <CardFooter className="pt-0">
             <Button color="green" className="flex items-center gap-3">
-              <EyeIcon />
-              <span className="inline-block">বিস্তারিত দেখুন</span>
+               বিস্তারিত দেখুন
             </Button>
           </CardFooter>
         </Card>
