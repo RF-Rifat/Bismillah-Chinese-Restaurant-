@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import { EyeIcon } from "@heroicons/react/24/outline";
 
 const MenuFoodCard = ({ cardData }) => {
   return (
@@ -19,7 +20,7 @@ const MenuFoodCard = ({ cardData }) => {
               src={cardData?.imageSrc}
               alt="card-image"
               className="h-full w-full object-cover"
-              quality={10}
+              loading="lazy"
               fill
               style={{
                 objectFit: "fill",
@@ -45,21 +46,8 @@ const MenuFoodCard = ({ cardData }) => {
           </CardBody>
           <CardFooter className="pt-0">
             <Button color="green" className="flex items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-                />
-              </svg>
-              Add to Cart
+              <EyeIcon />
+              <span className="inline-block">বিস্তারিত দেখুন</span>
             </Button>
           </CardFooter>
         </Card>
