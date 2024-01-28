@@ -10,7 +10,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FoodCard = ({ cardInfo }) => {
-  console.log(cardInfo);
   const { imageSrc, title, description } = cardInfo || {};
   return (
     <Card className="mt-6 bg-[#C1F0C1]">
@@ -18,6 +17,7 @@ const FoodCard = ({ cardInfo }) => {
         <Image
           src={imageSrc}
           alt="সেরা খাবার"
+          quality={10}
           fill
           sizes="(min-width: 808px) 50vw, 100vw"
           style={{

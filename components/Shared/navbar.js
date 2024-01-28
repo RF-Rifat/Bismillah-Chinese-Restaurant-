@@ -49,6 +49,17 @@ function NavList() {
       </Link>
 
       <Link
+        href={"/event"}
+        className={`font-bold py-2 px-4   
+           ${
+             usePathname() === "/event"
+               ? "active   bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
+               : ""
+           }`}
+      >
+        অনুষ্ঠান
+      </Link>
+      <Link
         href={"/menu"}
         className={`font-bold py-2 px-4   
            ${
@@ -98,11 +109,14 @@ export function MainNavbar() {
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Button variant="text" size="sm" color="blue-gray">
-            Log In
-          </Button>
-          <Button variant="gradient" size="sm">
-            Sign In
+          <Button size="lg" color="white" className="flex items-center gap-3">
+            <Image
+              src="https://docs.material-tailwind.com/icons/google.svg"
+              alt="metamask"
+              height={20}
+              width={20}
+            />
+            Login
           </Button>
         </div>
         <IconButton
@@ -121,11 +135,14 @@ export function MainNavbar() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-            Log In
-          </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Sign In
+          <Button size="lg" className="flex items-center gap-3">
+            <Image
+              src="https://docs.material-tailwind.com/icons/google.svg"
+              alt="metamask"
+              height={20}
+              width={20}
+            />
+            Login
           </Button>
         </div>
       </Collapse>
