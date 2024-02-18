@@ -8,7 +8,7 @@ import MainNavbar from "@/components/Shared/navbar";
 const latin = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "বিসমিল্লাহ্‌ চাইনীজ",
+  title: "বিসমিল্লাহ্‌ চাইনীজ রেস্টুরেন্ট",
   description:
     "গাইবান্ধায় গেষ্টদের প্রতিটি অনুষ্ঠানের জন্য তাজা ও গরম খাবার দ্রুত সুবিধাজনক কম খরচে পৌঁছাতে চেষ্টা করি।",
 };

@@ -91,7 +91,7 @@ export function MainNavbar() {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
+      () => window.innerWidth >= 260 && setOpenNav(false)
     );
   }, []);
 
@@ -103,7 +103,12 @@ export function MainNavbar() {
     >
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href={"/"}>
-          <Image width={150} height={150} alt="logo" src={"/image/navLogo.png"} />
+          <Image
+            width={150}
+            height={150}
+            alt="logo"
+            src={"/image/navLogo.png"}
+          />
         </Link>
         <div className="hidden lg:block">
           {/* <NavList /> */}
@@ -135,17 +140,19 @@ export function MainNavbar() {
       </div>
       <Collapse open={openNav}>
         {/* <NavList /> */}
-        <NavTab />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button size="lg" className="flex items-center gap-3">
-            <Image
-              src="https://docs.material-tailwind.com/icons/google.svg"
-              alt="metamask"
-              height={20}
-              width={20}
-            />
-            Login
-          </Button>
+        <div className="flex my-2 justify-between">
+          <NavTab />
+          <div className="flex flex-nowrap items-center gap-2 lg:hidden">
+            <Button size="sm" color="white" className="flex items-center gap-3">
+              <Image
+                src="https://docs.material-tailwind.com/icons/google.svg"
+                alt="metamask"
+                height={20}
+                width={20}
+              />
+              Login
+            </Button>
+          </div>
         </div>
       </Collapse>
     </Navbar>

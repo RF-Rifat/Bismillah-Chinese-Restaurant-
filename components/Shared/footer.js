@@ -3,11 +3,17 @@ import { FaFacebook, FaFacebookMessenger, FaWhatsapp } from "react-icons/fa";
 import { IoMailOpenOutline } from "react-icons/io5";
 
 import { Dancing_Script } from "next/font/google";
+import { Alkatra } from "next/font/google";
 import Link from "next/link";
 const cursive = Dancing_Script({
   subsets: ["latin"],
   display: "swap",
   weight: "700",
+});
+const BanglaCursive = Alkatra({
+  subsets: ["bengali"],
+  display: "swap",
+  weight: ["500", "700"],
 });
 
 const Footer = () => {
@@ -15,20 +21,25 @@ const Footer = () => {
     <>
       <footer className="relative z-10 pb-10 pt-20 dark:bg-dark lg:pb-10 lg:pt-[120px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-evenly items-center">
+          <div className="-mx-4 flex flex-wrap justify-evenly items-center md:items-start">
             <div className="px-4">
               <div className="mb-10 w-full mx-auto">
-                <Link href="/" className="mb-6 inline-block max-w-[160px]">
+                <Link href="/" className="mb-4 inline-block max-w-[160px]">
                   <Image
                     src="/image/logo.png"
                     alt="logo"
                     height={100}
                     width={100}
-                    className="dark:hidden w-full mx-auto"
+                    className="dark:hidden w-full ml-7"
                   />
                 </Link>
                 <p
-                  className={`mb-7 text-body-color dark:text-dark-6 text-xl ${cursive.className}`}
+                  className={`text-body-color dark:text-dark-6 text-xl text-center ${BanglaCursive.className}`}
+                >
+                  বিসমিল্লাহ্‌ চাইনীজ রেস্টুরেন্ট
+                </p>
+                <p
+                  className={`mb-7 text-body-color dark:text-dark-6 text-xl text-center ${cursive.className}`}
                 >
                   Beautiful Service is Our Dream
                 </p>
@@ -36,7 +47,9 @@ const Footer = () => {
             </div>
 
             <div>
-              <h2 className="font-semibold text-lg mb-3">খোলার সময়</h2>
+              <h2 className="font-semibold text-lg mb-3 border-b-4 border-red-700 rounded w-fit">
+                খোলার সময়
+              </h2>
               <ul>
                 <li>প্রতিদিন :</li>
                 <li className="mb-2">সকাল ১১:০০ টা হইতে রাত ১০ টা</li>
@@ -46,8 +59,10 @@ const Footer = () => {
             </div>
 
             <div>
-              <h2 className="font-semibold text-lg mb-3">দ্রুত লিঙ্ক</h2>
-              <ul>
+              <h2 className="font-semibold text-lg mb-3 border-b-4 border-red-700 rounded w-fit">
+                দ্রুত লিঙ্ক
+              </h2>
+              <ul className="space-y-3">
                 <li>
                   <a
                     href="https://www.facebook.com/people/%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A7%8D-%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%BF%E0%A6%9C-%E0%A6%B0%E0%A7%87%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%81%E0%A6%B0%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F-Beautiful-Service-is-Our-Dream/100083517151611"
@@ -99,8 +114,8 @@ const Footer = () => {
 
             <div className="px-4">
               <div className="mb-10 w-full">
-                <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-                  For More Info Visit Here
+                <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white border-b-4 border-red-700 rounded w-fit">
+                  আরও তথ্যের জন্য এখানে যান
                 </h4>
                 <div className="flex gap-2">
                   <a href="https://www.facebook.com/people/%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A7%8D-%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%BF%E0%A6%9C-%E0%A6%B0%E0%A7%87%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%81%E0%A6%B0%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F-Beautiful-Service-is-Our-Dream/100083517151611/">
