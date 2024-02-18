@@ -21,16 +21,19 @@ const Footer = () => {
     <>
       <footer className="relative z-10 pb-10 pt-20 dark:bg-dark lg:pb-10 lg:pt-[120px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-evenly items-center md:items-start">
+          <div className="-mx-4 flex flex-wrap justify-evenly gap-4 items-center md:items-start">
             <div className="px-4">
               <div className="mb-10 w-full mx-auto">
-                <Link href="/" className="mb-4 inline-block max-w-[160px]">
+                <Link
+                  href="/"
+                  className="mb-4 max-w-[160px] flex justify-center"
+                >
                   <Image
                     src="/image/logo.png"
                     alt="logo"
-                    height={100}
-                    width={100}
-                    className="dark:hidden w-full ml-7"
+                    height={600}
+                    width={600}
+                    className="dark:hidden flex justify-center h-28 w-28"
                   />
                 </Link>
                 <p
