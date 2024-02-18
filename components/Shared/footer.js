@@ -6,7 +6,7 @@ import { Dancing_Script } from "next/font/google";
 import { Alkatra } from "next/font/google";
 import Link from "next/link";
 const cursive = Dancing_Script({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
   display: "swap",
   weight: "700",
 });
