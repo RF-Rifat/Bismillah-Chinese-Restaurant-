@@ -140,9 +140,9 @@ export function MainNavbar() {
       </div>
       <Collapse open={openNav}>
         {/* <NavList /> */}
-        <div className="flex my-2 justify-between">
+        <div className="grid md:flex my-2 justify-between">
           <NavTab />
-          <div className="flex flex-nowrap items-center gap-2 lg:hidden">
+          <div className="flex flex-nowrap items-center gap-2 lg:hidden col-span-3 md:col-span-1">
             <Button size="sm" color="white" className="flex items-center gap-3">
               <Image
                 src="https://docs.material-tailwind.com/icons/google.svg"
