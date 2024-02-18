@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import { MainNavbar } from "@/components/Shared/navbar";
+
 import Footer from "@/components/Shared/footer";
+import MainNavbar from "@/components/Shared/navbar";
 
 const latin = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <head>
-       <link rel="shortcut icon" href="/image/logo.png" type="image/png" />  
+        <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
       </head>
       <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
         <MainNavbar />
