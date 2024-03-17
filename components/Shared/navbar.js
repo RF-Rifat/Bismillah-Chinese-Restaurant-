@@ -1,93 +1,13 @@
 "use client";
 import React from "react";
-import {
-  Navbar,
-  Collapse,
-  Typography,
-  Button,
-  IconButton,
-  List,
-  ListItem,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-} from "@material-tailwind/react";
-import {
-  ChevronDownIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-  Bars4Icon,
-  GlobeAmericasIcon,
-  NewspaperIcon,
-  PhoneIcon,
-  RectangleGroupIcon,
-  SquaresPlusIcon,
-  SunIcon,
-  TagIcon,
-  UserGroupIcon,
-} from "@heroicons/react/24/solid";
+import { Navbar, Collapse, Button, IconButton } from "@material-tailwind/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 
-// function NavList() {
-//   return (
-//     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row gap-2 lg:p-1">
-//       <Link
-//         href={"/"}
-//         className={`font-bold py-2 px-4
-//            ${
-//              usePathname() === "/"
-//                ? "active  bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
-//                : ""
-//            }`}
-//       >
-//         হোম
-//       </Link>
-
-//       <Link
-//         href={"/event"}
-//         className={`font-bold py-2 px-4
-//            ${
-//              usePathname() === "/event"
-//                ? "active   bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
-//                : ""
-//            }`}
-//       >
-//         অনুষ্ঠান
-//       </Link>
-//       <Link
-//         href={"/menu"}
-//         className={`font-bold py-2 px-4
-//            ${
-//              usePathname() === "/menu"
-//                ? "active   bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
-//                : ""
-//            }`}
-//       >
-//         খাবার মেনু
-//       </Link>
-//       <Link
-//         href={"/contact"}
-//         className={`font-bold py-2 px-4
-//            ${
-//              usePathname() === "/contact"
-//                ? "active   bg-blue-500 hover:bg-blue-700 text-white border-blue-700 rounded"
-//                : ""
-//            }`}
-//       >
-//         যোগাযোগ
-//       </Link>
-//     </List>
-//   );
-// }
-
-export function MainNavbar() {
+export async function MainNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
-
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -114,17 +34,22 @@ export function MainNavbar() {
           {/* <NavList /> */}
           <NavTab />
         </div>
-        <div className="hidden gap-2 lg:flex">
-          <Button size="lg" color="white" className="flex items-center gap-3">
-            <Image
-              src="https://docs.material-tailwind.com/icons/google.svg"
-              alt="metamask"
-              height={20}
-              width={20}
-            />
-            Login
-          </Button>
-        </div>
+        <SignedIn>
+          <UserProfile />
+        </SignedIn>
+        <SignedOut>
+          <Link href={"/sign-in"} className="hidden gap-2 lg:flex">
+            <Button size="lg" color="white" className="flex items-center gap-3">
+              <Image
+                src="https://docs.material-tailwind.com/icons/google.svg"
+                alt="metamask"
+                height={20}
+                width={20}
+              />
+              Login
+            </Button>
+          </Link>
+        </SignedOut>
         <IconButton
           variant="text"
           color="blue-gray"
@@ -138,39 +63,43 @@ export function MainNavbar() {
           )}
         </IconButton>
       </div>
+
       <Collapse open={openNav}>
         {/* <NavList /> */}
         <div className="grid md:flex my-2 justify-between">
           <NavTab />
-          <div className="flex flex-nowrap items-center gap-2 lg:hidden col-span-3 md:col-span-1">
-            <Button size="sm" color="white" className="flex items-center gap-3">
-              <Image
-                src="https://docs.material-tailwind.com/icons/google.svg"
-                alt="metamask"
-                height={20}
-                width={20}
-              />
-              Login
-            </Button>
-          </div>
+          <SignedIn>
+            <UserProfile />
+          </SignedIn>
+          <SignedOut>
+            <div className="flex flex-nowrap items-center gap-2 lg:hidden col-span-3 md:col-span-1">
+              <Button
+                size="sm"
+                color="white"
+                className="flex items-center gap-3"
+              >
+                <Image
+                  src="https://docs.material-tailwind.com/icons/google.svg"
+                  alt="metamask"
+                  height={20}
+                  width={20}
+                />
+                Login
+              </Button>
+            </div>
+          </SignedOut>
         </div>
       </Collapse>
     </Navbar>
-    // <NavTab />
   );
 }
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
+import { Tabs, TabsHeader, Tab } from "@material-tailwind/react";
 import {
   Square3Stack3DIcon,
   UserCircleIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/solid";
+import UserProfile from "./userProfile";
 const NavTab = () => {
   const data = [
     {
@@ -225,4 +154,3 @@ const NavTab = () => {
   );
 };
 
-export default MainNavbar;
