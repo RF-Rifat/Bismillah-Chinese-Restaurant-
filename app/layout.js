@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Footer from "@/components/Shared/footer";
 import { MainNavbar } from "@/components/Shared/navbar";
+import Providers from "@/lib/React-Query/Query-Provider";
 
 const latin = Inter({ subsets: ["latin"] });
 
@@ -16,15 +17,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <html
+        lang="en"
+        style={{ scrollBehavior: "smooth" }}
+        suppressHydrationWarning={true}
+      >
         <head>
           <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
         </head>
-        <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
-          <MainNavbar />
-          {children}
-          <Footer />
-        </body>
+        <Providers>
+          <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
+            <MainNavbar />
+            {children}
+            <Footer />
+          </body>
+        </Providers>
       </html>
     </ClerkProvider>
   );
