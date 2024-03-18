@@ -34,16 +34,21 @@ export const NavTab = () => {
   return (
     <Tabs value="/" className="bg-transparent">
       <TabsHeader
-        className="rounded-none border-b border-blue-gray-50 bg-transparent"
+        // className="rounded-none border-b border-blue-gray-50 bg-transparent"
         // indicatorProps={{
         //   className: "bg-gray-900/10 shadow-none !text-gray-900",
         // }}
+        className="border-b border-blue-gray-50 bg-transparent p-0"
+        indicatorProps={{
+          className:
+            "border-b-2 border-gray-900 shadow-none !text-gray-900 rounded-md bg-gray-900/10",
+        }}
       >
         {data.map(({ label, value, icon }) => (
           <Link href={value} key={value}>
             <Tab value={value} className="w-36">
               <div
-                className="flex items-center gap-2 text-lg"
+                className="grid items-center gap-2 text-lg"
                 indicatorProps={{
                   className: "text-white",
                 }}

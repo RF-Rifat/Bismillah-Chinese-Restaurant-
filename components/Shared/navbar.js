@@ -36,9 +36,12 @@ export function MainNavbar() {
           {/* <NavList /> */}
           <NavTab />
         </div>
-        <SignedIn>
-          <UserProfile />
-        </SignedIn>
+
+        <div className="hidden lg:block">
+          <SignedIn>
+            <UserProfile />
+          </SignedIn>
+        </div>
         <SignedOut>
           <Link href={"/sign-in"} className="hidden gap-2 lg:flex">
             <Button size="lg" color="white" className="flex items-center gap-3">
@@ -68,26 +71,28 @@ export function MainNavbar() {
 
       <Collapse open={openNav}>
         {/* <NavList /> */}
-        <div className="grid md:flex my-2 justify-between">
+        <div className="grid md:flex mt-5 justify-between">
           <NavTab />
           <SignedIn>
             <UserProfile />
           </SignedIn>
           <SignedOut>
             <div className="flex flex-nowrap items-center gap-2 lg:hidden col-span-3 md:col-span-1">
-              <Button
-                size="sm"
-                color="white"
-                className="flex items-center gap-3"
-              >
-                <Image
-                  src="https://docs.material-tailwind.com/icons/google.svg"
-                  alt="metamask"
-                  height={20}
-                  width={20}
-                />
-                Login
-              </Button>
+              <Link href={"/sign-in"}>
+                <Button
+                  size="sm"
+                  color="white"
+                  className="flex items-center gap-3"
+                >
+                  <Image
+                    src="https://docs.material-tailwind.com/icons/google.svg"
+                    alt="metamask"
+                    height={20}
+                    width={20}
+                  />
+                  Login
+                </Button>
+              </Link>
             </div>
           </SignedOut>
         </div>
