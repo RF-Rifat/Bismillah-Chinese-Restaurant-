@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { NavTab } from "./navtab";
+import { NavTab } from "./navTab";
 import UserProfile from "./userProfile";
 
 export function MainNavbar() {
@@ -41,7 +41,7 @@ export function MainNavbar() {
         </SignedIn>
         <SignedOut>
           <Link href={"/sign-in"} className="hidden gap-2 lg:flex">
-            {/* <Button size="lg" color="white" className="flex items-center gap-3">
+            <Button size="lg" color="white" className="flex items-center gap-3">
               <Image
                 src="https://docs.material-tailwind.com/icons/google.svg"
                 alt="metamask"
@@ -49,8 +49,7 @@ export function MainNavbar() {
                 width={20}
               />
               Login
-            </Button> */}
-            login
+            </Button>
           </Link>
         </SignedOut>
         <IconButton
@@ -76,7 +75,7 @@ export function MainNavbar() {
           </SignedIn>
           <SignedOut>
             <div className="flex flex-nowrap items-center gap-2 lg:hidden col-span-3 md:col-span-1">
-              {/* <Button
+              <Button
                 size="sm"
                 color="white"
                 className="flex items-center gap-3"
@@ -88,8 +87,7 @@ export function MainNavbar() {
                   width={20}
                 />
                 Login
-              </Button> */}
-              login
+              </Button>
             </div>
           </SignedOut>
         </div>

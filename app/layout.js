@@ -16,23 +16,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html
-        lang="en"
-        style={{ scrollBehavior: "smooth" }}
-        suppressHydrationWarning={true}
-      >
-        <head>
-          <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
-        </head>
-        <Providers>
-          <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
+    <html
+      lang="en"
+      style={{ scrollBehavior: "smooth" }}
+      suppressHydrationWarning={true}
+    >
+      <head>
+        <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
+      </head>
+      <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
+        <ClerkProvider>
+          <Providers>
             <MainNavbar />
             {children}
             <Footer />
-          </body>
-        </Providers>
-      </html>
-    </ClerkProvider>
+          </Providers>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }

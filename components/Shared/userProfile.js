@@ -1,6 +1,9 @@
-import { UserButton, auth } from "@clerk/nextjs";
+/* eslint-disable react-hooks/rules-of-hooks */
+import { UserButton } from "@clerk/nextjs";
+import { useClerk } from "@clerk/nextjs";
 const userProfile = () => {
-//   console.log(auth().userId);
+  const { user } = useClerk();
+  console.log(user?.emailAddresses[0]?.emailAddress);
   return (
     <>
       <UserButton afterSignOutUrl="/" />
