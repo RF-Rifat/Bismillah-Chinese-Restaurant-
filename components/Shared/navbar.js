@@ -1,10 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Navbar, Collapse, Button, IconButton } from "@material-tailwind/react";
+import {
+  Navbar,
+  Collapse,
+  Button,
+  IconButton,
+  Badge,
+} from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { BsCartCheck } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
-import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { NavTab } from "./navTab";
 import UserProfile from "./userProfile";
 
@@ -37,24 +43,13 @@ export function MainNavbar() {
           <NavTab />
         </div>
 
-        <div className="hidden lg:block">
-          <SignedIn>
-            <UserProfile />
-          </SignedIn>
+        <div>
+          <Badge content="5">
+            <IconButton variant="outlined">
+              <BsCartCheck className="size-6" />
+            </IconButton>{" "}
+          </Badge>
         </div>
-        <SignedOut>
-          <Link href={"/sign-in"} className="hidden gap-2 lg:flex">
-            <Button size="lg" color="white" className="flex items-center gap-3">
-              <Image
-                src="https://docs.material-tailwind.com/icons/google.svg"
-                alt="metamask"
-                height={20}
-                width={20}
-              />
-              Login
-            </Button>
-          </Link>
-        </SignedOut>
         <IconButton
           variant="text"
           color="blue-gray"
@@ -73,28 +68,11 @@ export function MainNavbar() {
         {/* <NavList /> */}
         <div className="grid md:flex mt-5 justify-between">
           <NavTab />
-          <SignedIn>
-            <UserProfile />
-          </SignedIn>
-          <SignedOut>
-            <div className="flex flex-nowrap items-center gap-2 lg:hidden col-span-3 md:col-span-1">
-              <Link href={"/sign-in"}>
-                <Button
-                  size="sm"
-                  color="white"
-                  className="flex items-center gap-3"
-                >
-                  <Image
-                    src="https://docs.material-tailwind.com/icons/google.svg"
-                    alt="metamask"
-                    height={20}
-                    width={20}
-                  />
-                  Login
-                </Button>
-              </Link>
-            </div>
-          </SignedOut>
+          <Badge content="5">
+            <IconButton variant="outlined">
+              <BsCartCheck className="size-5" />
+            </IconButton>{" "}
+          </Badge>
         </div>
       </Collapse>
     </Navbar>
