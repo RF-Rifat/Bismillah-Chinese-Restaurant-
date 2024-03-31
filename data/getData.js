@@ -8,7 +8,9 @@ const useGetUserData = (endpoint) => {
   } = useQuery({
     queryKey: ["data"],
     queryFn: () =>
-      fetch("http://localhost:5000" + endpoint).then((res) => res.json()),
+      fetch(
+        "https://bismillah-chiness-dashboard-server.vercel.app" + endpoint
+      ).then((res) => res.json()),
   });
   return [data, refetch, isPending];
 };
