@@ -43,7 +43,7 @@ export function MainNavbar() {
           <NavTab />
         </div>
 
-        <div>
+        <div className="hidden lg:block">
           <Badge content="5">
             <IconButton variant="outlined">
               <BsCartCheck className="size-6" />
@@ -65,8 +65,7 @@ export function MainNavbar() {
       </div>
 
       <Collapse open={openNav}>
-        {/* <NavList /> */}
-        <div className="grid md:flex mt-5 justify-between">
+        <div className="flex mt-5 justify-between px-4">
           <NavTab />
           <Badge content="5">
             <IconButton variant="outlined">

@@ -34,10 +34,6 @@ export const NavTab = () => {
   return (
     <Tabs value="/" className="bg-transparent">
       <TabsHeader
-        // className="rounded-none border-b border-blue-gray-50 bg-transparent"
-        // indicatorProps={{
-        //   className: "bg-gray-900/10 shadow-none !text-gray-900",
-        // }}
         className="border-b border-blue-gray-50 bg-transparent p-0"
         indicatorProps={{
           className:
@@ -46,14 +42,13 @@ export const NavTab = () => {
       >
         {data.map(({ label, value, icon }) => (
           <Link href={value} key={value}>
-            <Tab value={value} className="w-36">
+            <Tab value={value} className="px-4 md:px-0 md:w-36">
               <div
                 className="grid items-center gap-2 text-lg"
                 indicatorProps={{
                   className: "text-white",
                 }}
               >
-                {/* {React.createElement(icon, { className: "w-5 h-5" })} */}
                 {label}
               </div>
             </Tab>

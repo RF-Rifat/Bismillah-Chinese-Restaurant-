@@ -7,7 +7,8 @@ const useGetUserData = (endpoint) => {
     refetch,
   } = useQuery({
     queryKey: ["data"],
-    queryFn: () => fetch("http://localhost:3000" + endpoint).then((res) => res.json()),
+    queryFn: () =>
+      fetch("http://localhost:5000" + endpoint).then((res) => res.json()),
   });
   return [data, refetch, isPending];
 };
