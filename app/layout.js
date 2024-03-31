@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 import Footer from "@/components/Shared/footer";
@@ -25,13 +24,11 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
       </head>
       <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
-        <ClerkProvider>
-          <Providers>
-            <MainNavbar />
-            {children}
-            <Footer />
-          </Providers>
-        </ClerkProvider>
+        <Providers>
+          <MainNavbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -12,7 +12,7 @@ import { BsCartCheck } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
 import { NavTab } from "./navTab";
-import UserProfile from "./userProfile";
+
 
 export function MainNavbar() {
   const [openNav, setOpenNav] = useState(false);
