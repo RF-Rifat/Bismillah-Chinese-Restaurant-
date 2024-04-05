@@ -14,8 +14,8 @@ const BanglaCursive = Alkatra({
   subsets: ["bengali"],
   display: "swap",
   weight: ["500", "700"],
+  adjustFontFallback: false,
 });
-
 const Footer = () => {
   return (
     <>
