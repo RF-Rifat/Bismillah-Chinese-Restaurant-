@@ -11,7 +11,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { BsCartCheck } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
-import { NavTab } from "./NavTab";
+import { NavBarTab } from "./NavTab";
+
 
 export function MainNavbar() {
   const [openNav, setOpenNav] = useState(false);
@@ -39,7 +40,7 @@ export function MainNavbar() {
         </Link>
         <div className="hidden lg:block">
           {/* <NavList /> */}
-          <NavTab />
+          <NavBarTab />
         </div>
 
         <div className="hidden lg:block">
@@ -64,7 +65,7 @@ export function MainNavbar() {
       </div>
 
       <Collapse open={openNav}>
-        <NavTab />
+        <NavBarTab />
       </Collapse>
     </Navbar>
   );

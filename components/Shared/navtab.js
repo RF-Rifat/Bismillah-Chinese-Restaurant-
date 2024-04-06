@@ -5,7 +5,7 @@ import {
   Cog6ToothIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
-export const NavTab = () => {
+export const NavBarTab = () => {
   const data = [
     {
       label: "হোম",
