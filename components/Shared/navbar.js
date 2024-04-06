@@ -11,7 +11,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { BsCartCheck } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
-import { NavBarTab } from "./NavTab";
+import { NavBarTab } from "/components/Shared/navbar.js";
 
 
 export function MainNavbar() {
