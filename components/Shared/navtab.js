@@ -1,4 +1,4 @@
-import { Tabs, TabsHeader, Tab } from "@material-tailwind/react";
+import { Tabs, TabsHeader, Tab, TabsBody } from "@material-tailwind/react";
 import {
   Square3Stack3DIcon,
   UserCircleIcon,
@@ -32,7 +32,7 @@ export const NavTab = () => {
     },
   ];
   return (
-    <Tabs value="/" className="bg-transparent">
+    <Tabs value="/" className="bg-transparent pt-4 max-w-full">
       <TabsHeader
         className="border-b border-blue-gray-50 bg-transparent p-0"
         indicatorProps={{
@@ -43,14 +43,9 @@ export const NavTab = () => {
         {data.map(({ label, value, icon }) => (
           <Link href={value} key={value}>
             <Tab value={value} className="px-4 md:px-0 md:w-36">
-              <div
-                className="grid items-center gap-2 text-lg"
-                indicatorProps={{
-                  className: "text-white",
-                }}
-              >
+              <TabsBody className="grid items-center gap-2 text-lg">
                 {label}
-              </div>
+              </TabsBody>
             </Tab>
           </Link>
         ))}

@@ -13,7 +13,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { NavTab } from "./navTab";
 
-
 export function MainNavbar() {
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
@@ -65,14 +64,7 @@ export function MainNavbar() {
       </div>
 
       <Collapse open={openNav}>
-        <div className="flex mt-5 justify-between px-4">
-          <NavTab />
-          <Badge content="5">
-            <IconButton variant="outlined">
-              <BsCartCheck className="size-5" />
-            </IconButton>{" "}
-          </Badge>
-        </div>
+        <NavTab />
       </Collapse>
     </Navbar>
   );
